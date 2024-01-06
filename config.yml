@@ -27,11 +27,11 @@ params:
       url: "https://linkedin.com/in/maelghrib"
 
 permalinks:
-  blog: ':filename/'
+  blogs: 'blogs/:filename/'
 
 menu:
   main:
-    - name: "blog"
+    - name: "blogs"
       weight: 1
-      url: "blog/"
+      url: "blogs/"
 
