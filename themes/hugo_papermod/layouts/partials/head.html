@@ -21,7 +21,6 @@
         {{ if .Params.author }} - {{ .Params.author }} {{ end }}
         {{ if and .Params.date (not .Params.arabic_date) }} - {{ .PublishDate.Format "2 January 2006" }} {{ end }}
         {{ if .Params.location }} - {{ .Params.location }} {{ end }}
-        {{ if and .IsSection (not .Params.arabic_author) }} | {{ site.Params.author }} {{ end }}
         {{ end }}
         {{ end }}
     </title>

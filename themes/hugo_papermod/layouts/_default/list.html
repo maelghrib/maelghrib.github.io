@@ -12,19 +12,36 @@
 {{- end }}
 
 {{- if not .IsHome | and .Title }}
-<p class="page-header">{{ .Title }}</p>
+<div class="page-header">
+    <p class="page-header-title">{{ .Title }}</p>
+    <p class="page-header-subtitle">{{ .Params.subtitle }}</p>
+    {{- if .Params.line }}
+    <hr style="width: 400px">
+    {{- end }}
+</div>
 {{- end }}
 
-{{- range $pages }}
+{{- range sort $pages "Weight" "asc" }}
 <a aria-label="post link to {{ .Title }}" href="{{ .Permalink }}">
     <div dir="auto" class="post-entry">
         <div class="entry-header">
-            <p class="entry-title">{{- .Title }}</p>
+            <div style="white-space: nowrap">
+                <p class="entry-title">
+                    {{- if .Params.subtitle }}
+                    {{- .Title }}:
+                    {{- else }}
+                    {{- .Title }}
+                    {{- end }}
+                </p>
+                <p class="entry-subtitle">{{ .Params.subtitle }}</p>
+            </div>
             {{- if not .RegularPages}}
             {{- if (and .Params.arabic_date .Params.arabic_location)}}
-            <p class="entry-info">{{ .Params.arabic_date }} - {{ .Params.arabic_location }}</p>
+            <p class="entry-info">{{ .Params.arabic_date }}</p>
             {{ else }}
-            <p class="entry-info">{{ .PublishDate.Format "2 Jan 2006" }} - {{ .Params.location }}</p>
+            {{- if .Params.date}}
+            <p class="entry-info">{{ .PublishDate.Format "2 Jan 2006" }}</p>
+            {{- end }}
             {{- end }}
             {{- end }}
         </div>

@@ -15,7 +15,14 @@
 .entry-title {
     font-size: 18px;
     font-weight: bold;
-    color: #2091ee;
+    color: var(--mytheme);
+    display: inline-block
+}
+
+.entry-subtitle {
+    font-size: 18px;
+    color: var(--mytheme);
+    display: inline-block
 }
 
 .entry-info {

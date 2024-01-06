@@ -24,7 +24,7 @@
 .logo a {
     font-size: 24px;
     font-weight: 700;
-    color: #2091ee;
+    color: var(--mytheme);
 }
 
 .logo a img, .logo a svg {
@@ -66,8 +66,8 @@ body:not(.dark) #sun {
 }
 
 #menu .active {
-    font-weight: 500;
-    color: #2091ee;
+    font-weight: bold;
+    color: var(--mytheme);
 }
 
 .lang-switch li,

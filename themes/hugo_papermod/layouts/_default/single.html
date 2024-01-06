@@ -9,7 +9,9 @@
       <p class="post-date">{{ .Params.arabic_author }} - {{ .Params.arabic_date }} - {{ .Params.arabic_location }}</p>
     </div>
     {{ else }}
+    {{- if (and .Params.date .Params.author .Params.location)}}
     <p class="post-date">{{ .Params.author }} - {{ .PublishDate.Format "2 January 2006" }} - {{ .Params.location }}</p>
+    {{- end }}
     {{- end }}
     <hr>
   </header>
