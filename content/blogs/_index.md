@@ -1,4 +1,5 @@
 ---
-title: "Technical Blog"
+title: "Blogs"
+author: "Mustafa A. Elghrib"
 ---
 

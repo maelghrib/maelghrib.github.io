@@ -15,6 +15,7 @@
         {{ else }}
         {{ if .Title }}
         {{ .Title }}
+        {{ if .Params.subtitle }} : {{ .Params.subtitle }} {{ end }}
         {{ if .Params.arabic_author }} - {{ .Params.arabic_author }} {{ end }}
         {{ if .Params.arabic_date }} - {{ .Params.arabic_date }} {{ end }}
         {{ if .Params.arabic_location }} - {{ .Params.arabic_location }} {{ end }}
